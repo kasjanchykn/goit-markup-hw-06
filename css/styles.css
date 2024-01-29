@@ -158,10 +158,9 @@ ol {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  max-width: 1440px;
+  margin: 0 auto;
   /* padding: 188px 0; */
   padding: 72px 16px;
-  margin: 0 auto;
 }
 
 .hero-container {
@@ -178,15 +177,14 @@ ol {
   font-weight: 700;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  /* font-size: 56px; */
-  /* line-height: 1.07; */
-
-  max-width: 288px;
-  min-height: 160px;
+  max-width: 216px;
   font-size: 36px;
   line-height: 1.11;
   text-transform: capitalize;
   /* max-width: 496px; */
+  /* font-size: 56px; */
+  /* line-height: 1.07; */
+  /* min-height: 160px; */
 }
 
 .hero-order-btn {
@@ -222,8 +220,6 @@ ol {
 .feature-list {
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: row; */
-  /* flex-direction: column; */
   align-items: center;
   gap: 72px;
   /* gap: 24px; */
@@ -854,18 +850,16 @@ ol {
     max-width: 768px;
   }
 
-  br {
-    display: none;
-  }
-
   .hero {
-    padding: 112px 136px;
+    padding: 112px 0;
   }
 
   .hero-title {
     font-size: 56px;
     line-height: 1.07;
     max-width: 496px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-container {
@@ -915,6 +909,14 @@ ol {
     max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .hero {
+    padding: 188px 0;
+  }
+
+  .hero-container {
+    gap: 48px;
   }
 
   .about-feature {
