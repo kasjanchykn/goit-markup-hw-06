@@ -52,6 +52,7 @@ ol {
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .navigation {
@@ -67,7 +68,8 @@ ol {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-right: 76px;
+  /* margin-right: 76px; */
+  padding: 17px 0;
 }
 
 .logo-name {
@@ -75,10 +77,11 @@ ol {
 }
 
 .nav-list {
-  display: flex;
-  gap: 40px;
+  display: none;
+  /* display: flex;
+  gap: 40px; */
 }
-.address-list {
+/* .address-list {
   display: flex;
   gap: 40px;
 }
@@ -96,8 +99,8 @@ ol {
 .menu-link:hover,
 .menu-link:focus {
   color: #404bbf;
-}
-
+} */
+/* 
 .current {
   position: relative;
   color: #404bbf;
@@ -112,14 +115,22 @@ ol {
   width: 100%;
   left: 0;
   bottom: -1px;
-}
+} */
 
 .address {
-  font-style: normal;
-  margin-left: auto;
+  display: none;
+  /* font-style: normal;
+  margin-left: auto; */
 }
 
-.contacts {
+.open-menu-btn {
+  padding: 0;
+  border: none;
+  line-height: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+/* .contacts {
   color: #434455;
   font-size: 16px;
   line-height: 1.5;
@@ -130,7 +141,7 @@ ol {
 .contacts:hover,
 .contacts:focus {
   color: #404bbf;
-}
+} */
 
 .visually-hidden {
   position: absolute;
@@ -144,6 +155,7 @@ ol {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 /* ................................... */
 /*.............Section hero............. */
 
@@ -154,7 +166,7 @@ ol {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero.jpg);
+    url(../images/hero-mob.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -163,6 +175,18 @@ ol {
   padding: 72px 16px;
 }
 
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-mob-2x.jpg);
+  }
+}
 .hero-container {
   display: flex;
   flex-direction: column;
@@ -452,15 +476,19 @@ ol {
 
 .footer-container {
   display: flex;
-  align-items: baseline;
+  align-content: center;
+  flex-direction: column;
+  gap: 72px;
+  /* align-items: baseline; */
 }
-.footer-section {
+/* .footer-section {
   margin-right: 120px;
-}
+} */
 
 .footer {
   background-color: #2e2f42;
-  padding: 100px 0 100px;
+  padding: 97.5px 0 96px;
+  /* padding: 100px 0 100px; */
 }
 
 .logo-names {
@@ -468,8 +496,10 @@ ol {
 }
 
 .logotyp {
-  display: inline-block;
-  margin-bottom: 16px;
+  /* display: inline-block; */
+  /* margin-bottom: 16px; */
+  display: flex;
+  justify-content: center;
 }
 
 .footer-text {
@@ -478,17 +508,17 @@ ol {
   letter-spacing: 0.02em;
   width: 264px;
 }
+/* 
 .footer-soc-container {
-  margin-right: 80px;
-}
-
-.footer-media {
+  /* margin-right: 80px; */
+*/ .footer-media {
   color: #fff;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   font-size: 16px;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer-soc-icon {
@@ -530,8 +560,11 @@ ol {
 
 .footer-form {
   display: flex;
-  flex-direction: row;
-  gap: 24px;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  /* flex-direction: row; */
+  /* gap: 24px; */
 }
 .footer-subscribe {
   color: #fff;
@@ -540,17 +573,20 @@ ol {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer-input {
-  width: 264px;
+  width: 288px;
+  /* width: 264px; */
   height: 40px;
   border-radius: 4px;
   border: 1px solid #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background: #2e2f42;
   padding-left: 16px;
-  margin-right: 24px;
+  /* margin-right: 24px; */
+
   color: #ffffff;
   background-color: transparent;
   font-size: 12px;
@@ -579,18 +615,18 @@ ol {
   background: #4d5ae5;
   padding: 8px 24px;
   height: 40px;
-  min-width: 165px;
+  /* min-width: 165px; */
+  max-width: 165px;
   border: none;
   color: #fff;
-  text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -850,8 +886,92 @@ ol {
     max-width: 768px;
   }
 
+  .logo {
+    margin-right: 120px;
+  }
+  .nav-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .open-menu-btn {
+    display: none;
+  }
+
+  .menu-link {
+    color: #2e2f42;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding: 24px 0;
+    display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu-link:hover,
+  .menu-link:focus {
+    color: #404bbf;
+  }
+  .current {
+    position: relative;
+    color: #404bbf;
+  }
+
+  .current::after {
+    content: "";
+    position: absolute;
+    background-color: #404bbf;
+    border-radius: 2px;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+  }
+  .address {
+    display: block;
+    font-style: normal;
+    margin-left: auto;
+  }
+  .address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contacts {
+    color: #434455;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .contacts:hover,
+  .contacts:focus {
+    color: #404bbf;
+  }
+
   .hero {
     padding: 112px 0;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-table.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .hero {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-table-2x.jpg);
+    }
   }
 
   .hero-title {
@@ -911,8 +1031,42 @@ ol {
     padding-right: 15px;
   }
 
+  .logo {
+    margin-right: 76px;
+  }
+
+  .address-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .contacts {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
   .hero {
     padding: 188px 0;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .hero {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-2x.jpg);
+    }
   }
 
   .hero-container {
