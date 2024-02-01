@@ -776,7 +776,7 @@
     </footer>
 
     <!-- Form -->
-    <div class="backdrop is-open">
+    <div class="backdrop is-open-modal">
       <div class="modal">
         <button type="button" class="modal-close-btn">
           <svg class="modal-close-icon" width="8" height="8">
@@ -835,26 +835,28 @@
             <textarea
               name="user-comment"
               id="user-comment"
-              class="model-text"
+              class="modal-text"
               placeholder="Text input"
             ></textarea>
           </div>
           <div class="modal-field check-box">
-             <label for="user-privacy" class="check-text">
-            <input
-              type="checkbox"
-              name="user-privacy"
-              id="user-privacy"
-              class="check-input visually-hidden"
-              value="true"
-            />
-           
-              <span class="span-form">
-                <svg class="check-icon" width="10" height="8">
-                  <use href="./images/icons.svg#icon-vector"></use>
-                </svg>
-              </span>
-             <div class="block">
+             <div class="form-icon">
+               <label for="user-privacy" class="check-text">
+              <input
+                type="checkbox"
+                name="user-privacy"
+                id="user-privacy"
+                class="check-input visually-hidden"
+                value="true"
+              />
+             
+                <span class="span-form">
+                  <svg class="check-icon" width="10" height="8">
+                    <use href="./images/icons.svg#icon-vector"></use>
+                  </svg>
+                </span>
+             </div>
+             <div class="text">
                 I accept the terms and conditions of the
                 <a href="" class="check-link"> Privacy Policy</a>
              </div>
